@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchBar from "./SearchBar";
 import Simulation from "./Simulation";
+import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import { connect } from "react-redux";
 import { mapDispatchToProps, mapStateToProps } from  './actions/actionsApp'
@@ -24,7 +25,7 @@ class App extends Component {
 
   render() {
     return(
-      <div className="yo">
+      <div className="container">
         <div className="row">
           <SearchBar handleSubmit={this.handleSubmit} />
           <Simulation />
