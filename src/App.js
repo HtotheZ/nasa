@@ -23,11 +23,20 @@ class App extends Component {
     })
   };
 
+  onClickFn = (neo) => {
+      console.log(neo.name);
+    this.props.gotSelected(neo.name);
+      console.log(this.props.selected);
+    let arr = values(neo);
+    this.props.addData(arr);
+      console.log(arr);
+  }
+
   render() {
     return(
-      <div className="container">
+      <div>
         <div className="row">
-          <SearchBar handleSubmit={this.handleSubmit} />
+          <SearchBar handleSubmit={this.handleSubmit} onClickFn={this.onClickFn} />
           <Simulation />
         </div>
         <div>
@@ -44,4 +53,6 @@ export default connect(mapStateToProps, mapDispatchToProps)(App);
 //posegregowac
 //drugi komponent z details
 //google api
+
+//className="container"
 

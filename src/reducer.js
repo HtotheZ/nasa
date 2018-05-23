@@ -5,7 +5,8 @@ export const reducer = (state = {
     number: 10,
     startDate:"",
     endDate: "",
-    arr: []
+    arr: [],
+    data:[]
 }, action) => {
     switch (action.type) {
         case "NUMBER":
@@ -30,6 +31,18 @@ export const reducer = (state = {
             state = {
                 ...state,
                 arr: action.payload
+            };
+            break;
+        case "SELECTED":
+            state = {
+                ...state,
+                selected: action.payload
+            };
+            break;
+        case "DATA":
+            state = {
+                ...state,
+                data: action.payload
             };
             break;
         default:

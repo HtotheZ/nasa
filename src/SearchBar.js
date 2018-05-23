@@ -8,7 +8,7 @@ import AsteroidTable from "./AsteroidTable";
 const SearchBar = (props) => {
     return (
         <div>
-            <div className="col-xs-6">
+            <div className="col">
             <h2>NEO impact simulator</h2>
                 <form onSubmit={props.handleSubmit}>
                     <div className="container">
@@ -25,20 +25,7 @@ const SearchBar = (props) => {
                     </div>
                 </form>
                 <div>
-                    {/* <table>
-                    <tbody>
-                    {props.arr.map(neo => 
-                    <tr>
-                        {console.log(props.arr)}
-                        <td>{neo.name}</td> 
-                        <td>{neo.close_approach_data[0].close_approach_date}</td>
-                        <td>{neo.estimated_diameter.meters.estimated_diameter_min.toFixed(2)}</td>
-                        <td>{neo.estimated_diameter.meters.estimated_diameter_max.toFixed(2)}</td>
-                    </tr>
-                    )}
-                </tbody>
-                    </table> */}
-                    <AsteroidTable />
+                    <AsteroidTable onClickFn={props.onClickFn} />
                 </div>
             </div>
         </div>

@@ -4,7 +4,9 @@ export const mapStateToProps = state => {
     startDate: state.startDate,
     endDate: state.endDate,
     arr: state.arr,
-    apiKey: "yXMnUlwzXYhXQ90Md4xJDJIFotpFujfugMZQiDzn"
+    selected: state.selected,
+    apiKey: "yXMnUlwzXYhXQ90Md4xJDJIFotpFujfugMZQiDzn",
+    data: state.data
   };
 };
 
@@ -13,5 +15,11 @@ export const mapDispatchToProps = dispatch => {
     addArr: (arr) => { 
       dispatch({ type: "ARR", payload: arr });
     },
+    gotSelected: (selected) => { 
+      dispatch({ type: "SELECTED", payload: selected });
+    },
+    addData: (data) => {
+      dispatch({ type: "DATA", payload: data});
+    }
   };
 };
