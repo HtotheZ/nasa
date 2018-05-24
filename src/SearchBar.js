@@ -7,8 +7,8 @@ import AsteroidTable from "./AsteroidTable";
 
 const SearchBar = (props) => {
     return (
-        <div>
-            <div className="col">
+        <div className="col-xs-6">
+            <div>
             <h2>NEO impact simulator</h2>
                 <form onSubmit={props.handleSubmit}>
                     <div className="container">
@@ -19,7 +19,6 @@ const SearchBar = (props) => {
                             </div>
                             <div className ="col-xs-6">
                                 <button type="submit" className="btn btn-danger buttons" onClick={() => console.log(props.startDate, props.endDate)}>GO</button>
-                                <p>{props.startDate}</p>
                             </div>
                         </div>
                     </div>

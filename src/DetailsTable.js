@@ -17,14 +17,14 @@ const DetailsTable = (props) => {
                 </tr>
               </thead>
               <tbody>
-                {props.data.map(data => 
+                {/* {props.data.map(data => 
                   <tr>
                     <td>{data[1]}</td> 
                     <td>dsfsdswvwv</td>
                     <td>dsgdgsdgsgsdgsgdsd</td>
                     <td>Ajfdngjsd</td>
                   </tr>
-                )}
+                )} */}
             </tbody>
           </table>
         </div>

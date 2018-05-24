@@ -6,7 +6,8 @@ export const reducer = (state = {
     startDate:"",
     endDate: "",
     arr: [],
-    data:[]
+    data:[],
+    radius: ""
 }, action) => {
     switch (action.type) {
         case "NUMBER":
@@ -40,6 +41,12 @@ export const reducer = (state = {
             };
             break;
         case "DATA":
+            state = {
+                ...state,
+                data: action.payload
+            };
+            break;
+        case "RADIUS":
             state = {
                 ...state,
                 data: action.payload

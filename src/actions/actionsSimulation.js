@@ -1,6 +1,8 @@
 export const mapStateToProps = state => {
     return {
-        selected: state.selected
+        selected: state.selected,
+        arr: state.arr,
+        radius: state.radius
     };
   };
   

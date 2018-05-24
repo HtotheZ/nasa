@@ -6,7 +6,8 @@ export const mapStateToProps = state => {
     arr: state.arr,
     selected: state.selected,
     apiKey: "yXMnUlwzXYhXQ90Md4xJDJIFotpFujfugMZQiDzn",
-    data: state.data
+    data: state.data,
+    radius: state.radius
   };
 };
 
@@ -20,6 +21,9 @@ export const mapDispatchToProps = dispatch => {
     },
     addData: (data) => {
       dispatch({ type: "DATA", payload: data});
+    },
+    getRadius: (radius) => {
+      dispatch({ type: "RADIUS", payload: radius})
     }
   };
 };

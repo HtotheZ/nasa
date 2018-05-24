@@ -9,19 +9,11 @@ import MapComponent from "./MapComponent";
 
 const Simulation = (props) => {
     return (
-      <div>
-        <div className="col">
-            <div>
-                <MapComponent 
-                  isMarkerShown 
-                  googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
-                  loadingElement={<div style={{ height: `100%` }} />}
-                  containerElement={<div style={{ height: `400px` }} />}
-                  mapElement={<div style={{ height: `100%` }} />} />
-                <h3>Luka</h3>
-                <DetailsTable />
-            </div>
-        </div>
+      <div className="col-xs-6">
+          <div>
+              <MapComponent isMarkerShown radius={props.radius} />
+              <DetailsTable />
+          </div>
       </div>
     );
   };
