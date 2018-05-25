@@ -19,7 +19,7 @@ const AsteroidTable = (props) => {
                     {props.arr.map(neo => 
                     <tr
                     onClick={() => props.onClickFn(neo)}
-                    className={props.selected === neo.name ? 'table-success' : ''}>
+                    className={props.selected === neo ? 'table-success' : ''}>
                     {console.log(props.selected)}
                     {}
                         <td>{neo.name}</td> 

@@ -19,16 +19,17 @@ const MapComponent = compose(
   withScriptjs,
   withGoogleMap
 )(props => (
-  <GoogleMap defaultZoom={10} defaultCenter={{ lat: 65.603, lng: -16.996 }}>
+  <GoogleMap defaultZoom={7} defaultCenter={{ lat: 65.603, lng: -16.996 }}>
     {props.isMarkerShown && 
     <Marker 
-      position={{ lat: 65.603, lng: -16.996 }} 
-      
+      position={{ lat: 65.603, lng: -16.996 }} defaultDraggable={true}
     />}
     <Circle
-      defaultRadius={6000} defaultCenter={{ lat: 65.603, lng: -16.996 }} visible={true} radius={props.radius}
+       defaultCenter={{ lat: 65.603, lng: -16.996 }} visible={true} radius={props.radius}
     />
   </GoogleMap>
 ));
 
 export default MapComponent;
+
+//defaultRadius={6000}

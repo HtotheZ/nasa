@@ -9,7 +9,7 @@ import MapComponent from "./MapComponent";
 
 const Simulation = (props) => {
     return (
-      <div className="col-xs-6">
+      <div className="col-6">
           <div>
               <MapComponent isMarkerShown radius={props.radius} />
               <DetailsTable />
